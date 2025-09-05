@@ -1,0 +1,25 @@
+[project]
+name = "chat-with-notion"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Antarx",email = "liangyi@bupt.edu.cn"}
+]
+readme = "README.md"
+requires-python = ">=3.11, <4.0"
+dependencies = [
+    "langchain (>=0.3.27,<0.4.0)",
+    "chainlit (>=2.7.2,<3.0.0)",
+    "notion-client (>=2.5.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "chat_with_notion", from = "src"}]
+
+[tool.poetry.scripts]
+chat-with-notion = "chat_with_notion.cli:main"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
